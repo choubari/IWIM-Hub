@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "700581749542",
+    "project_id": "iwim-hub-9e075",
+    "storage_bucket": "iwim-hub-9e075.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700581749542:android:01fa632f30c5d5fabbd7e7",
+        "android_client_info": {
+          "package_name": "com.choubapps.iwim_hub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700581749542-irimrea0fk6hgv6pe4l8127rufee1mv8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4_cb9_uRrXczIpxy8s60kS-lpuX3vHyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700581749542-irimrea0fk6hgv6pe4l8127rufee1mv8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
