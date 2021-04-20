@@ -16,8 +16,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="IWIM Hub"
-            android:textColor="@color/bgcolor"
+            android:text="@string/app_name"
+            android:textColor="@color/colorAccent"
             android:textSize="50sp"
             android:textStyle="bold"
             android:gravity="center"
@@ -95,6 +95,7 @@
             android:textColor="@color/grey"
             android:textStyle="bold" />
         <TextView
+            android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
