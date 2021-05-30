@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".UserData"></activity>
+        <activity android:name=".ListEtudiants" />
+        <activity android:name=".ListProfesseurs" />
+        <activity android:name=".Dashboard" />
         <activity android:name=".Registration" />
         <activity android:name=".MainActivity">
             <intent-filter>

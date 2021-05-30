@@ -1,13 +1,12 @@
 package com.choubapp.iwim_hub.Model;
 
 public class User {
-    private String nom, prenom, email, password, type;
+    private String nom, prenom, email, type;
 
-    public User(String nom, String prenom, String email, String password, String type) {
+    public User(String nom, String prenom, String email, String type) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
-        this.password = password;
         this.type= type;
     }
 
@@ -44,13 +43,5 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 }

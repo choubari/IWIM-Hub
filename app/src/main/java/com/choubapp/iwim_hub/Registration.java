@@ -4,10 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.RadialGradient;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +30,8 @@ public class Registration extends AppCompatActivity {
     private TextInputEditText nomInput, prenomInput, emailInput, passwordInput;
     private String nom, prenom, password, email;
     private FirebaseAuth mAuth;
+    private RadioButton radioButton;
+    private RadioGroup radioGroup;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
@@ -39,13 +43,19 @@ public class Registration extends AppCompatActivity {
         prenomInput = findViewById(R.id.login_prenom);
         passwordInput = findViewById(R.id.login_password);
         emailInput = findViewById(R.id.login_email);
-
-
+        radioGroup = findViewById(R.id.radio_group);
     }
 
     public void registerNewUser(View v){
         email = emailInput.getText().toString();
         password = passwordInput.getText().toString();
+        nom = nomInput.getText().toString();
+        prenom=prenomInput.getText().toString();
+
+        int selectedid= radioGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(selectedid);
+        final String SelectedUser= radioButton.getText().toString();
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -56,14 +66,17 @@ public class Registration extends AppCompatActivity {
                             //FirebaseUser user = mAuth.getCurrentUser();
                             User user = new User();
                             user.setEmail(emailInput.getText().toString());
-                            user.setNom(nomInput.getText().toString());
-                            user.setPrenom(prenomInput.getText().toString());
-                            user.setType("Etudiant");
+                            user.setNom(nom);
+                            user.setPrenom(prenom);
+                            user.setType(SelectedUser);
                             db.collection("User").document(email).set(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                    if (task.isSuccessful()) {
                                        Toast.makeText(Registration.this, "Registrated successfully", Toast.LENGTH_SHORT).show();
+                                       Intent intent = new Intent(Registration.this, MainActivity.class);
+                                       startActivity(intent);
+                                       finish();
                                    }else{
                                        Toast.makeText(Registration.this, "Registrated Not Successfully", Toast.LENGTH_SHORT).show();
                                    }
