@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserData"></activity>
+        <activity android:name=".Abscences"></activity>
+        <activity android:name=".Messagerie" />
+        <activity android:name=".Matieres" />
+        <activity android:name=".Timetables" />
+        <activity android:name=".RedirectionToLists" />
+        <activity android:name=".UserData" />
         <activity android:name=".ListEtudiants" />
         <activity android:name=".ListProfesseurs" />
         <activity android:name=".Dashboard" />

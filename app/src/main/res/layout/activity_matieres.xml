@@ -7,7 +7,7 @@
     android:background="@color/colorPrimary"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".ListProfesseurs">
+    tools:context=".Matieres">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -17,7 +17,7 @@
             android:textSize="35sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:text="Liste des Professeurs"/>
+            android:text="Liste des Matieres"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/learnCard"
             android:layout_width="wrap_content"
@@ -34,15 +34,7 @@
                 android:padding="10dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
-                android:src="@drawable/users"/>
+                android:src="@drawable/book"/>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:layout_marginTop="10dp"
-        android:padding="4dp"
-        android:scrollbars="vertical"/>
 </LinearLayout>

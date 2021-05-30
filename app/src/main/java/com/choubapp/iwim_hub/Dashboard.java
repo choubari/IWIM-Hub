@@ -110,6 +110,37 @@ public class Dashboard extends AppCompatActivity {
         }
     }
 
+    public void Messagerie(View v){
+        Intent intent = new Intent(this, Messagerie.class);
+        startActivity(intent);
+    }
+    public void Timetables(View v){
+        Intent intent = new Intent(this, Timetables.class);
+        startActivity(intent);
+    }
+    public void Matieres(View v){
+        Intent intent = new Intent(this, Matieres.class);
+        startActivity(intent);
+    }
+    public void Abscences(View v){
+        Intent intent = new Intent(this, Abscences.class);
+        startActivity(intent);
+    }
+
+    public void ProfessorsStudentsList(View V){
+        if (role.getText().toString().equals("Professeur")){
+            Intent intent = new Intent(this, ListEtudiants.class);
+            startActivity(intent);
+        }else{
+            if (role.getText().toString().equals("Etudiant")){
+                Intent intent = new Intent(this, ListProfesseurs.class);
+                startActivity(intent);
+            }else{
+                Intent intent = new Intent(this, RedirectionToLists.class);
+                startActivity(intent);
+            }
+        }
+    }
     public void logout(View v) {
         auth.signOut();
         Intent intent = new Intent(this, MainActivity.class);

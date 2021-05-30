@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
+            android:text="IWIM Hub"
             android:textColor="@color/white"
             android:textSize="50sp"
             android:textStyle="bold"
