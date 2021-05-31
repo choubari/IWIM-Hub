@@ -33,6 +33,8 @@ public class ListProfesseurs extends AppCompatActivity {
         FirestoreRecyclerOptions<User> options = new FirestoreRecyclerOptions.Builder<User>()
                 .setQuery(query, User.class)
                 .build();
+
+        System.out.println("dddd"+ query + "  "+options);
         adapter= new UserListAdapter(options);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);

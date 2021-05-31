@@ -12,11 +12,12 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 import com.google.firebase.firestore.Query;
 
 public class ListEtudiants extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    CollectionReference usersCollection = db.collection("User");
+   // CollectionReference usersCollection = db.collection("User");
     private UserListAdapter adapter;
 
     @Override
@@ -27,7 +28,8 @@ public class ListEtudiants extends AppCompatActivity {
     }
 
     private void setUpRecyclerView() {
-        Query query = usersCollection.whereEqualTo("type","Etudiant").orderBy("nom", Query.Direction.ASCENDING);
+        Query query = db.collection("User").whereEqualTo("type","Etudiant").orderBy("nom", Query.Direction.ASCENDING);
+
         FirestoreRecyclerOptions<User> options = new FirestoreRecyclerOptions.Builder<User>()
                 .setQuery(query, User.class)
                 .build();

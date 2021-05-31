@@ -15,16 +15,20 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth;
     private TextInputEditText emailInput, passwordInput;
     private String password, email;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         auth = FirebaseAuth.getInstance();
         passwordInput = findViewById(R.id.login_password);
         emailInput = findViewById(R.id.login_email);
