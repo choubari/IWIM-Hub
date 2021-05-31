@@ -122,6 +122,7 @@ public class Dashboard extends AppCompatActivity {
     }
     public void Matieres(View v){
         Intent intent = new Intent(this, Matieres.class);
+        intent.putExtra("SELECTED_USER_ROLE", role.getText().toString());
         startActivity(intent);
     }
     public void Abscences(View v){

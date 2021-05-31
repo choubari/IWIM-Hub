@@ -38,4 +38,87 @@
                 android:src="@drawable/smartphone"/>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:text="Destinataire :"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/spinnerMessages"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ListView
+                android:id="@+id/chat_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="80dp"
+                android:drawSelectorOnTop="true"
+                android:headerDividersEnabled="true"
+                android:stackFromBottom="true">
+            </ListView>
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="3dp"
+                android:background="@color/purple"
+                android:text="Date"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginEnd="30dp"
+                android:layout_alignParentEnd="true"
+                android:hint="Message" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="12dp"
+                android:focusable="true"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="8dp">
+                <ImageView
+                    android:id="@+id/sendButton"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:src="@drawable/paperplane"
+                    android:layout_alignParentEnd="true"/>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </RelativeLayout>
 </LinearLayout>

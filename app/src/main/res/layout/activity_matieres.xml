@@ -37,4 +37,26 @@
                 android:src="@drawable/book"/>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ajouterMatiere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:textColor="@color/white"
+            android:onClick="ajouterMatiere"
+            android:text="+ Ajouter Matiere"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:scrollbars="vertical"/>
 </LinearLayout>

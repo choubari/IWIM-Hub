@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -66,7 +67,11 @@ public class UserData extends AppCompatActivity {
         });
 
     }
-
+    public void sendMessage (View v){
+        Intent intent = new Intent(this,Messagerie.class);
+        intent.putExtra("SELECTED_USER_EMAIL", userSelectedEmail);
+        startActivity(intent);
+    }
     private void loadImage() {
         storageReference.child(userSelectedEmail).child("ProfilePicture").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override

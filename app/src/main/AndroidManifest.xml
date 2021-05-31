@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Abscences"></activity>
+        <activity android:name=".AjouterMatiere"></activity>
+        <activity android:name=".Abscences" />
         <activity android:name=".Messagerie" />
         <activity android:name=".Matieres" />
         <activity android:name=".Timetables" />
